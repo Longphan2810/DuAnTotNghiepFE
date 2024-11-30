@@ -150,4 +150,24 @@
               style="background-color: rgba(239, 25, 54, 0.831);">Xác nhận</button>
     </div>
   </div>
+
+  <!-- Modal Đặt bàn không thành công -->
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom p-3 rounded-2" 
+       [ngClass]="{'d-none': !errorShift}" 
+       style="max-width:600px">
+    <div class="tittle-confilm text-center">
+      <img src="./img/warning.png" width="170px" alt="">
+      <div class="title-success">
+        <h5 class="fw-bold">Đặt bàn không thành công!</h5>
+        <i style="font-size: 0.9em;">Hiện tại cửa hàng đang giao ca vui lòng chờ trong giây lại.</i> <br>
+        <i style="font-size: 0.9em;">Quý khách vui lòng đến tại quầy hoặc gọi nhân viên để được hổ trợ trực tiếp.</i>
+      </div>
+    </div>
+    <div class="box-btn d-flex justify-content-end pt-2">
+      <button onclick="document.getElementById('id01').style.display='none'" 
+              type="button" 
+              class="w3-button rounded-3 text-white" 
+              style="background-color: rgba(239, 25, 54, 0.831);">Xác nhận</button>
+    </div>
+  </div>
 </div>

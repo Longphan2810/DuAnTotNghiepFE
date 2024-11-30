@@ -9,6 +9,7 @@ const routes: Routes = [{
     path: '', component: StaffviewTableOrderComponent, children: [
 
       { path: 'orderprocessing/:idOrder/:idTable', component : OrderprocessingComponent ,canActivate:[RoleGuardService], data:{expectedRole :["STAFF","MANAGER"]}  },
+      { path: 'orderprocessing/:idOrder/:idTable/:reload', component : OrderprocessingComponent ,canActivate:[RoleGuardService], data:{expectedRole :["STAFF","MANAGER"]}  },
       { path: 'orderprocessing/:idTable', component : OrderprocessingComponent ,canActivate:[RoleGuardService], data:{expectedRole :["STAFF","MANAGER"]}  },
       { path: 'tableorder', component : TableorderStaffComponent ,canActivate:[RoleGuardService], data:{expectedRole :["STAFF","MANAGER"]}   },
       

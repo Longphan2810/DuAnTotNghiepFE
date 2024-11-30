@@ -26,9 +26,12 @@
             <div
               class="item-product col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-4 px-2 position-relative d-flex align-items-center"
               *ngFor="let product of listProducts">
-              <div class="box-item-product">
-                <div class="img-product p-3 border border-secondary rounded-3">
-                  <img src="http://localhost:8080/images/{{product.imgFood}}" alt="" class="w-100">
+              <div  class="box-item-product">
+                <div  class="img-product p-3 border border-secondary rounded-3">
+                  <div *ngIf="product.imgFood">
+                    <img  src="{{hostingImg}}{{product.imgFood}}" alt="" class="w-100">
+                  </div>
+                  <img *ngIf="product.imgFood==null " src="./img/noImage.jpg"  class="card-img-top w-100 h-100"  alt="...">
                   <div class="position-absolute" *ngIf="product.discount" [ngClass]="{'box-sale': product.discount}">
                     <span class="tittle-discount">-{{product.discount}}%</span>
                   </div>

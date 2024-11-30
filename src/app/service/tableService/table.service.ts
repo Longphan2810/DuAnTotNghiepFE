@@ -41,7 +41,7 @@ export class TableService {
   }
 
   getTable(idtable: number): Observable<ApiRespone> {
-    return this.http.get<ApiRespone>(`${this.url}/api/v1/tables/${idtable}`,{headers:this.header});
+    return this.http.get<ApiRespone>(`${this.url}/api/v1/tables/${idtable}`);
   }
 
   createTable(request: tabelRequest): Observable<ApiRespone> {

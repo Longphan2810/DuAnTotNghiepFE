@@ -10,11 +10,13 @@
       <button routerLink="/admin/manager/managerOrder" [class.active]="currentView=='managerOrder'" (click)="activeButton('managerOrder','')" type="button" class="btn btn-lg text-start shadow border  active btn-light my-2 w-100">Quản lý đơn hàng</button>
       <button routerLink="/admin/manager/managerTable" [class.active]="currentView=='managerTable'" (click)="activeButton('managerTable','')" type="button" class="btn btn-lg text-start shadow border  active btn-light my-2 w-100">Quản lý bàn</button>
       <button routerLink="/admin/manager/managerVoucher" [class.active]="currentView=='managerVoucher'" (click)="activeButton('managerVoucher','')" type="button" class="btn btn-lg text-start shadow border  active btn-light my-2 w-100">Quản lý Voucher</button>
-      </div>
+      <button type="button" routerLink="/admin/manager/managerReport" [class.active]="currentView=='managerReport'" (click)="activeButton('managerReport','')" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Thống kê</button>
+      
+    </div>
       <div class="my-2"></div>
       <div class=" pt-4 mt-5 ">
-          <button type="button" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Tổng quan</button>
-          <button type="button" routerLink="/admin/manager/managerReport" [class.active]="currentView=='managerReport'" (click)="activeButton('managerReport','')" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Thống kê</button>
+          <!-- <button type="button" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Tổng quan</button> -->
+          <!-- <button type="button" routerLink="/admin/manager/managerReport" [class.active]="currentView=='managerReport'" (click)="activeButton('managerReport','')" class="btn btn-lg text-start shadow border  btn-light my-2 w-100">Thống kê</button> -->
         
       </div>
   </div>

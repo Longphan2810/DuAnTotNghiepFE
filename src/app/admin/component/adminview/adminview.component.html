@@ -78,7 +78,7 @@
             <div class="modal-body">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <h6>Giờ đầu ca: <span class="text-primary">14/07/2020 08:45</span></h6>
+                        <h6>Giờ đầu ca: <span class="text-primary"> {{ datainfoCheckout.dateStart | date:'dd/MM/yyyy HH:mm' }}</span></h6>
                         <div class="mb-2">
                             <label>Tiền đầu ca (1):</label>
                             <input type="text" class="form-control money-input" value="{{formatPrice(datainfoCheckout.cashAtStart)}}" readonly>
@@ -107,7 +107,7 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                        <h6>Giờ hiện tại: <span class="text-danger">14/07/2020 08:47</span></h6>
+                        <h6>Giờ hiện tại: <span class="text-danger">{{ currentTime | date:'dd/MM/yyyy HH:mm' }}</span></h6>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>

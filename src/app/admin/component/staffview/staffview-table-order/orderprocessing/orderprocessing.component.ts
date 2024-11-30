@@ -25,6 +25,7 @@ import { IpServiceService } from '../../../../../service/ipService/ip-service.se
 import { AreaService } from '../../../../../service/areaService/area.service';
 import { AreaResponse } from '../../../../../entity/response/area-response';
 import { RequestOrder } from '../../../../../service/requestOrder.service';
+import { ApiConfigService } from '../../../../../service/ApiConfigService';
 
 @Component({
   selector: 'app-orderprocessing',
@@ -68,6 +69,8 @@ test!: any;
   cancelReason: string = '';
   itemOrderDetailToCancel: number | null = null;
 
+  srcImage = "./img/noImage.jpg";
+  hostingImg = ApiConfigService.apiUrlimg;
 
 refreshListMerge(){
   this.seletedListMergerFood=[];
@@ -95,7 +98,8 @@ refreshListMerge(){
     private requestOrder: RequestOrder,  
     private paymentService : PaymentService,
     private invoiceService : InvoiceService,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private apiConfigService : ApiConfigService
   ) { }
 
   ngOnInit(): void {
@@ -148,6 +152,8 @@ refreshListMerge(){
     this.routerActive.params.subscribe((param) => {
       let idOrder = param['idOrder'];
       let idTable = param['idTable'];
+      console.log(idOrder);
+      console.log(idTable);
       if (idOrder != undefined) {
         this.getOrder(idOrder);
         this.orderdetailsService
@@ -964,7 +970,7 @@ openTotast(status: string) {
 
   reloadData() {
     console.log(this.router.url); 
-    this.router.navigateByUrl(this.router.url+'&reload=1')
+    this.router.navigateByUrl(this.router.url+'/reload=1')
 
   
 
